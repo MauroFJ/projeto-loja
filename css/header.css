@@ -2,9 +2,11 @@
   display: flex;
   justify-content: space-between;
   background: darkviolet;
+  position: relative;
 }
 
 .header h1 {
+  font-style: italic;
   padding: 10px;
   margin-left: 20px;
   color: #f5f5f5;
@@ -17,13 +19,32 @@
 }
 
 .nav li + li {
-  margin: 20px 25px;
+  margin: 20px 5px;
 }
 
 .produto {
   align-self: center;
-  margin-right: 25px;
+  margin-right: 5px;
   color: #f5f5f5;
+}
+
+.carrinho { 
+  color: aliceblue;
+  width: 40px;
+  align-self: center; 
+  cursor: pointer;
+}
+
+.carrinho::after {
+  content: '0';
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background: #f5f5f5;
+  color: blueviolet;
+  border-radius: 200px;
+
+  position: absolute;
 }
 
 .header a {
