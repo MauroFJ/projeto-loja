@@ -1,0 +1,16 @@
+main {
+  background-image: url(../assets/teste5.jpg );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: calc(80vh - 87.78px);
+}
+
+.texto-diferente {
+  max-width: 550px;
+  font-size: 60px;
+  height: 100%;
+  color: #f5f5f5;
+  padding: 60px 20px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}

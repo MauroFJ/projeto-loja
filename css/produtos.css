@@ -1,0 +1,45 @@
+.mais-vendidas {
+  margin: 20px;
+}
+
+.mais-vendidas h3{
+  font-size: 40px;
+  margin: 30px 15px;
+}
+
+.clothes {
+  display: flex;
+  gap: 20px;
+}
+
+.clothes img{
+  width: 300px;
+  border-radius: 5px;
+}
+
+.camisas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.camisas p {
+  color: #757474;
+}
+
+.camisas .valor {
+  color: rgb(46, 45, 45);
+  margin: 5px 0px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.clothes .camisas:hover {
+  scale: 1.1;
+  cursor: pointer;
+  transition: .4s;
+}

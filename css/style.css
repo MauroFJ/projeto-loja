@@ -1,10 +1,4 @@
 @import url(header.css);
 @import url(global.css);
-
-main {
-  background-image: url(../assets/teste5.jpg );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: calc(80vh - 87.78px);
-}
+@import url(main-hero.css);
+@import url(produtos.css);
