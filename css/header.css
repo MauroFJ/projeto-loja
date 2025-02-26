@@ -67,10 +67,12 @@
   background: #f5f5f5;
   color: darkviolet;
   border-radius: 1000px;
+  transition: .4s;
 }
 
 li a:hover {
   background: #f5f5f5;
   color: darkviolet;
   border-radius: 1000px;
+  transition: .4s;
 }
