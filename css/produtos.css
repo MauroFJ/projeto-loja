@@ -1,8 +1,8 @@
-.mais-vendidas {
+.mais-vendidas, .roupas {
   margin: 20px;
 }
 
-.mais-vendidas h3{
+.mais-vendidas h3, .roupas h3{
   font-size: 40px;
   margin: 30px 15px;
 }
