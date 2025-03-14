@@ -1,4 +1,4 @@
-const menuProduto = document.querySelectorAll('.produto');
+const menuProduto = document.querySelector('.produto');
 
 function showMenu() {
   const openMenu = document.querySelector('.produtos')
@@ -6,6 +6,4 @@ function showMenu() {
   openMenu.classList.toggle('showMenu');
 }
 
-menuProduto.forEach((produto) => {
-  produto.addEventListener('click', showMenu);
-})
+menuProduto.addEventListener('click', showMenu);

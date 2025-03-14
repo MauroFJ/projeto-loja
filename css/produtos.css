@@ -5,6 +5,7 @@
 .mais-vendidas h3, .roupas h3{
   font-size: 40px;
   margin: 30px 15px;
+  color: #4D4D4D;
 }
 
 .clothes {
@@ -17,7 +18,7 @@
   border-radius: 5px;
 }
 
-.camisas {
+.peças {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,18 +29,18 @@
   transition: .4s;
 }
 
-.camisas p {
+.peças p {
   color: #757474;
 }
 
-.camisas .valor {
+.peças .valor {
   color: rgb(46, 45, 45);
   margin: 5px 0px;
   font-weight: bold;
   font-size: 20px;
 }
 
-.clothes .camisas:hover {
-  scale: 1.1;
+.clothes .peças:hover {
+  scale: 1.07;
   cursor: pointer;
 }
