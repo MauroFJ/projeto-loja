@@ -16,10 +16,4 @@ html {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-style: normal;
-  overflow-x: hidden;
-}
-
-.clothes {
-  overflow-y: hidden;
-  overflow-x: auto;
 }
