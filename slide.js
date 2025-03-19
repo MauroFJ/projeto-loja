@@ -3,6 +3,7 @@ export default class Slide {
     this.slide = document.querySelector(slide);
     this.wrapper = document.querySelector(wrapper);
     this.dist = {finalPosition: 0, startX: 0,movement: 0}
+    this.activeClass = 'active'
   }
 
   transition(active) {
@@ -49,7 +50,7 @@ export default class Slide {
     } else {
       this.changeSlide(this.index.active);
     }
-  }
+  }//aaaaaaaaaaaaaaaaaaaaa
 
   onMove(event) {
     const pointerPosition = (event.type === 'mousemove') ? event.clientX : event.changedTouches[0].clientX
@@ -62,13 +63,6 @@ export default class Slide {
     this.wrapper.addEventListener('touchstart',this.onStart)
     this.wrapper.addEventListener('mouseup',this.onEnd)
     this.wrapper.addEventListener('touchend',this.onEnd)
-  }
-
-  bindEvents() {
-    this.onStart = this.onStart.bind(this);
-    this.onMove = this.onMove.bind(this);
-    this.onEnd = this.onEnd.bind(this);
-    this.addSlideEvents();
   }
 
   //slides configs
@@ -99,6 +93,12 @@ export default class Slide {
     this.moveSlide(this.slideArray[index].position)
     this.slideIndexNav(index);
     this.dist.finalPosition = activeSlide.position;
+    this.changeActiveClass()
+  }
+
+  changeActiveClass() {
+    this.slideArray.forEach(item => item.element.classList.remove(this.activeClass))
+    this.slideArray[this.index.active].element.classList.add(this.activeClass)
   }
 
   activeNextSlide() {
@@ -117,12 +117,32 @@ export default class Slide {
     }
   }
 
+  onResize() {
+    setTimeout(() => {
+      this.slidesConfigs();
+      this.changeSlide(this.index.active);
+    },1000)
+  }
+
+  addResizeEvent() {
+    window.addEventListener('resize', this.onResize);
+  }
+
+  bindEvents() {
+    this.onStart = this.onStart.bind(this);
+    this.onMove = this.onMove.bind(this);
+    this.onEnd = this.onEnd.bind(this);
+    this.onResize = this.onResize.bind(this);
+
+    this.addSlideEvents();
+  }
 
   init(){
     this.bindEvents();
     this.addSlideEvents();
     this.slidesConfigs();
-    this.changeSlide(3)
+    this.changeSlide(3);
+    addResizeEvent();
 
     this.transition(true)
     return this;
