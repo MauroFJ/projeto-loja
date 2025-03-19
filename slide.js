@@ -5,6 +5,10 @@ export default class Slide {
     this.dist = {finalPosition: 0, startX: 0,movement: 0}
   }
 
+  transition(active) {
+    this.slide.style.transition = active ? 'transform .3s' : '';
+  }
+
   moveSlide(distX) {
     this.dist.movePosition = distX
     this.slide.style.transform = `translate3d(${distX}px ,0 ,0)`
@@ -26,12 +30,25 @@ export default class Slide {
       moveType = 'touchmove';
     }
     this.wrapper.addEventListener(moveType,this.onMove)
+    this.transition(false)
   }
 
   onEnd(event) {
     const moveType = (event.type === 'mouseup') ? 'mousemove' : 'touchmove';
     this.wrapper.removeEventListener(moveType, this.onMove)
     this.dist.finalPosition = this.dist.movePosition;
+    this.transition(true)
+    this.changeSlideOnEnd();
+  }
+
+  changeSlideOnEnd() {
+    if (this.dist.movement > 120) {
+      this.activeNextSlide();
+    } else if (this.dist.movement < -120) {
+      this.activePrevSlide();
+    } else {
+      this.changeSlide(this.index.active);
+    }
   }
 
   onMove(event) {
@@ -51,6 +68,7 @@ export default class Slide {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
+    this.addSlideEvents();
   }
 
   //slides configs
@@ -67,7 +85,7 @@ export default class Slide {
     })
   }
 
-  slideIndexNav() {
+  slideIndexNav(index) {
     const last = this.slideArray.length - 1;
     this.index = {
       prev: index ? index - 1 : undefined,
@@ -83,10 +101,30 @@ export default class Slide {
     this.dist.finalPosition = activeSlide.position;
   }
 
+  activeNextSlide() {
+    if (this.index.next !== undefined) {
+      this.changeSlide(this.index.next);
+    } else {
+      this.changeSlide(0); // Volta ao primeiro slide quando atinge o último
+    }
+  }
+  
+  activePrevSlide() {
+    if (this.index.prev !== undefined) {
+      this.changeSlide(this.index.prev);
+    } else {
+      this.changeSlide(this.slideArray.length - 1); // Vai para o último slide ao tentar voltar antes do primeiro
+    }
+  }
+
+
   init(){
     this.bindEvents();
     this.addSlideEvents();
     this.slidesConfigs();
+    this.changeSlide(3)
+
+    this.transition(true)
     return this;
   }
 }
