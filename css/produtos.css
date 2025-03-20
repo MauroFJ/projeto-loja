@@ -11,6 +11,11 @@
 .clothes {
   display: flex;
   gap: 20px;
+  transition: .7s;
+}
+
+.prev, .next {
+  transition: .7s;
 }
 
 .clothes img{
@@ -44,7 +49,7 @@
   cursor: pointer;
 }
 
-.slide li {
+/* .slide li {
   opacity: 0.8;
   transform: scale(0.9);
   transition: .4s;
@@ -57,4 +62,4 @@
 
 .slide:hover {
   will-change: transform;
-}
+} */
