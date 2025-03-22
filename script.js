@@ -6,6 +6,7 @@ slide.init();
 slide.addArrow('.prev','.next')
 
 const menuProduto = document.querySelector('.produto');
+const mais = document.querySelector('.mais')
 // const next = document.querySelectorAll('.next');
 // const prev = document.querySelectorAll('.prev');
 // const cloths = document.querySelectorAll('.clothes')
@@ -16,6 +17,18 @@ function showMenu() {
   this.classList.toggle('active');
   openMenu.classList.toggle('showMenu');
 }
+
+function mostrarMais() {
+  this.previousElementSibling.classList.toggle('active')
+  if (this.previousElementSibling.classList.contains('active')) {
+    this.innerHTML = '<p>Mostrar menos...</p>'
+  } else {
+    this.innerHTML = '<p>Mostrar mais...</p>'
+
+  }
+}
+
+mais.addEventListener('click', mostrarMais)
 
 // function moveRight() {
 //   prev.style.transform = 'translate3d(300px, 0, 0)'

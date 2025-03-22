@@ -71,3 +71,50 @@
   top: calc(50% - 80px);
   z-index: 1;
 } */
+
+.banner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 100px 0;
+
+  & img {
+    width: 80vw;
+  }
+
+  & .text-banner {
+    position: absolute;
+    bottom: 0;
+    padding: 100px 150px;
+    color: #fff;
+    background: radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0.3) 90%);
+    text-align: center;
+
+    font-size: 40px;
+    width: 80vw;
+  }
+}
+
+/* -------------------------------------- */
+
+.mais{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 100px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.mais p:hover {
+  color: rgba(0, 0, 0, 0.288);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden.active {
+  display: block;
+}
