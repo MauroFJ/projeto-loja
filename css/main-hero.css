@@ -23,6 +23,7 @@ main {
 
 @media (max-width: 650px) {
   main {
+    height: 500px;
     & .texto-diferente {
       width: 400px;
       font-size: 40px;
