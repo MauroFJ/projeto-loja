@@ -36,3 +36,15 @@
 .sobre .image img {
   width: 200px;
 }
+
+@media (max-width: 650px) {
+  .sobre {
+    margin: 20px;
+    & h3 {
+      font-size: 32px;
+    }
+    & p {
+      font-size: 14px;
+    }
+  }
+}
