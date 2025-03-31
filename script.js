@@ -1,34 +1,33 @@
-import {SlideNav} from './slide.js'
+import { SlideNav } from './slide.js';
 
 const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
 
-slide.addArrow('.prev','.next')
+slide.addArrow('.prev', '.next');
 
-const menuProduto = document.querySelector('.produto');
-const mais = document.querySelector('.mais')
+const menuImg = document.querySelector('.menu img');
+const menuText = document.querySelector('.produto');
+
+const mais = document.querySelector('.mais');
 // const next = document.querySelectorAll('.next');
 // const prev = document.querySelectorAll('.prev');
 // const cloths = document.querySelectorAll('.clothes')
 
-
 function showMenu() {
-  const openMenu = document.querySelector('.produtos')
-  this.classList.toggle('active');
+  const openMenu = document.querySelector('.produtos');
   openMenu.classList.toggle('showMenu');
 }
 
 function mostrarMais() {
-  this.previousElementSibling.classList.toggle('active')
+  this.previousElementSibling.classList.toggle('active');
   if (this.previousElementSibling.classList.contains('active')) {
-    this.innerHTML = '<p>Mostrar menos...</p>'
+    this.innerHTML = '<p>Mostrar menos...</p>';
   } else {
-    this.innerHTML = '<p>Mostrar mais...</p>'
-
+    this.innerHTML = '<p>Mostrar mais...</p>';
   }
 }
 
-mais.addEventListener('click', mostrarMais)
+mais.addEventListener('click', mostrarMais);
 
 // function moveRight() {
 //   prev.style.transform = 'translate3d(300px, 0, 0)'
@@ -43,8 +42,13 @@ mais.addEventListener('click', mostrarMais)
 //   cloths.style.transform = 'translate3d(0, 0, 0)'
 // }
 
+menuImg.addEventListener('click', showMenu);
+menuText.addEventListener('click', function () {
+  const openMenu = document.querySelector('.produtos');
+  this.classList.toggle('active');
+  openMenu.classList.toggle('showMenu');
+});
 
-menuProduto.addEventListener('click', showMenu);
 // next.forEach((i)=> {
 //   i.addEventListener('click', moveRight)
 // })

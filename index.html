@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>projeto</title>
 </head>
+
 <body>
   <header class="header">
     <div>
-      <img src="assets/logo.webp" alt="">
+      <img class="logo" src="assets/logo.webp" alt="">
       <h1>Infinity Store</h1>
     </div>
     <nav>
-        <ul class="nav">
+      <ul class="nav">
+        <div class="menu">
+          <img class="menuHamburguer" src="assets/menu.png" alt="">
           <li class="produto">Nossos produtos</li>
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Contato</a></li>
           <li><a href="#">Mais vendidos</a></li>
-          <div class="carrinho">
-            <img class="carrinho" src="assets/carrinho-de-compras-2.png" alt="">
-          </div>
-        </ul>
-        <ul class="produtos">
-          <li>Camisas</li>
-          <li>Shorts</li>
-          <li>Jaquetas</li>
-          <li>Calças</li>
-        </ul>
+        </div>
+        <div class="carrinho">
+          <img class="carrinho" src="assets/carrinho-de-compras-2.png" alt="">
+        </div>
+      </ul>
+      <ul class="produtos">
+        <li>Camisas</li>
+        <li>Shorts</li>
+        <li>Jaquetas</li>
+        <li>Calças</li>
+      </ul>
     </nav>
   </header>
 
@@ -42,7 +47,6 @@
   <section class="roupas lançamentos slide-wrapper">
     <h3>Lançamentos</h3>
     <ul class="clothes slide">
-    <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
       <li class="peças">
         <img src="assets/foto-sec-calças-05.jpg" alt="">
         <h4>Calça social Feminina</h4>
@@ -63,7 +67,7 @@
         <img src="assets/foto-sec-moletom-04.jpg" alt="">
         <h4>Moletom preto unissex</h4>
         <p>de <s>R$192,90</s> para</p>
-        <span class="valor">R$ 142,00 avista</span> 
+        <span class="valor">R$ 142,00 avista</span>
         <p>2x de R$75,00 parcelado</p>
       </li>
 
@@ -93,7 +97,6 @@
   <section class="roupas camisas">
     <h3>Camisas</h3>
     <ul class="clothes">
-    <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
 
       <li class="peças">
         <img src="assets/foto-sec-camisas-01.jpg" alt="">
@@ -126,7 +129,7 @@
         <span class="valor">R$ 27,90 avista</span>
         <p>2x de R$17,00 parcelado</p>
       </li>
-      
+
       <li class="peças">
         <img src="assets/camisa-branca-F.jpg" alt="">
         <h4>Camisa branca Feminina</h4>
@@ -134,7 +137,6 @@
         <span class="valor">R$ 33,90 avista</span>
         <p>2x de R$18,90 parcelado</p>
       </li>
-    <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
 
     </ul>
   </section>
@@ -142,7 +144,7 @@
   <section class="roupas mais-vendidas">
     <h3>Mais vendidas atualmente</h3>
     <ul class="clothes">
-    <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
+      <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
 
       <li class="peças">
         <img src="assets/foto-sec-moletom-02.jpg" alt="">
@@ -183,17 +185,15 @@
         <span class="valor">R$ 79,99 avista</span>
         <p>2x de R$45,99 parcelado</p>
       </li>
-    <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
+      <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
     </ul>
   </section>
-
- 
 
   <div class="hidden">
     <section class="roupas shorts">
       <h3>Shorts</h3>
       <ul class="clothes">
-      <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
+        <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
         <li class="peças">
           <img src="assets/short-1.jpg" alt="">
           <h4>Shorts colorido Masculino</h4>
@@ -229,14 +229,14 @@
           <span class="valor">R$ 27,90 avista</span>
           <p>2x de R$17,00 parcelado</p>
         </li>
-      <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
+        <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
       </ul>
     </section>
 
     <section class="roupas moletom">
       <h3>Moletons</h3>
       <ul class="clothes">
-      <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
+        <!-- <div class="next"><img src="assets/proximo-icon.png" alt=""></div> -->
         <li class="peças">
           <img src="assets/foto-sec-moletom-02.jpg" alt="">
           <h4>Moletom azul unissex</h4>
@@ -272,15 +272,15 @@
           <span class="valor">R$ 99,99 avista</span>
           <p>2x de R$55,99 parcelado</p>
         </li>
-      <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
+        <!-- <div class="prev"><img src="assets/anterior-icon.png" alt=""></div> -->
       </ul>
     </section>
   </div>
 
-   <span class="mais">
+  <span class="mais">
     <p>Mostrar mais...</p>
   </span>
-  
+
   <article class="banner">
     <img src="assets/banner-img.jpg" alt="">
     <p class="text-banner">vista-se com a infinity e deslumbre da moda</p>
@@ -291,7 +291,7 @@
     <div class="image">
       <img src="assets/logo.webp" alt="">
     </div>
-    
+
     <p>
       Fundada em 2020, a Infinity Store nasceu com a missão de trazer estilo, conforto e autenticidade para o seu guarda-roupa. Acreditamos que a moda vai além das tendências – é uma forma de expressão.
 
@@ -301,14 +301,14 @@
 
       Vista-se com atitude. Vista-se com Infinity Store. 💜✨
     </p>
-    
+
   </section>
 
   <div>
     <nav class="sociais">
       <a href="https://www.instagram.com/mauro.sly/"><img src="assets/instagram.png" alt=""></a>
-      <a href="https://www.linkedin.com/in/mauroFJ/"target="_blank"><img src="assets/linkedin.png" alt=""></a>
-      <a href="https://github.com/MauroFJ"target="_blank"><img src="assets/github.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/mauroFJ/" target="_blank"><img src="assets/linkedin.png" alt=""></a>
+      <a href="https://github.com/MauroFJ" target="_blank"><img src="assets/github.png" alt=""></a>
     </nav>
   </div>
 
@@ -331,18 +331,19 @@
     </div>
 
     <div class="pagamento">
-        <h4>Formas de pagamento</h4>
-        <img src="assets/logo-visa.png" alt="">
-        <img src="assets/logo-elo.png" alt="">
-        <img src="assets/logo-maestrocard.webp" alt="">
-        <img src="assets/american-express-logo.png" alt="">
-        <img src="assets/logo-mastercard.png" alt="">
-        <img src="assets/logo-paypal.webp" alt="">
-        <img src="assets/logo-boleto.png" alt="">
-        <img src="assets/logo-pix.png" alt="">
+      <h4>Formas de pagamento</h4>
+      <img src="assets/logo-visa.png" alt="">
+      <img src="assets/logo-elo.png" alt="">
+      <img src="assets/logo-maestrocard.webp" alt="">
+      <img src="assets/american-express-logo.png" alt="">
+      <img src="assets/logo-mastercard.png" alt="">
+      <img src="assets/logo-paypal.webp" alt="">
+      <img src="assets/logo-boleto.png" alt="">
+      <img src="assets/logo-pix.png" alt="">
     </div>
   </section>
 
   <script type="module" src="script.js"></script>
 </body>
+
 </html>

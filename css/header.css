@@ -38,6 +38,15 @@
   color: #f5f5f5;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu img{
+  display: none;
+}
+
 .carrinho { 
   color: aliceblue;
   width: 40px;
@@ -119,4 +128,76 @@ li a:hover {
   background: #f5f5f5;
   color: #4d4d4d;
   border-radius: 4px;
+}
+
+@media (max-width:1200px) {
+  .header {
+    & .nav {
+      & .menu {
+        flex-direction: column;
+        & li {
+          display: none;
+        }
+        & img {
+          display: block;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    & nav {
+      & .produtos {
+        margin-top: 5px;
+        margin-left: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width:650px) {
+ .header {
+  flex-direction: column;
+  align-items: center;
+  & .carrinho {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+  & .logo {
+    width: 50px;
+    height: 30px;
+  }
+  & .menu {
+    & .menuHamburguer {
+      width: 40px;
+      position: absolute;
+      right: 0px;
+      top: 15px;
+    }
+  }
+  & nav {
+    & .produtos {
+      position: absolute;
+      right: 0px;
+      top: 64px;
+    }
+  }
+ 
+ }
+}
+
+@media (max-width:460px) {
+  .header {
+    & .logo {
+      display: none;
+    }
+    & h1 {
+      font-size: 24px;
+    }
+    & nav {
+      & .produtos {
+        margin-top: -9px;
+      }
+    }
+  }
 }

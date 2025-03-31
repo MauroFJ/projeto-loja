@@ -14,3 +14,18 @@ main {
   padding: 60px 20px;
   background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0));
 }
+
+@media (max-width: 850px) {
+  main {
+    background-position: center;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    & .texto-diferente {
+      width: 400px;
+      font-size: 40px;
+    }
+  }
+}
