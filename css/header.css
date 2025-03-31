@@ -188,6 +188,7 @@ li a:hover {
 
 @media (max-width:460px) {
   .header {
+   
     & .logo {
       display: none;
     }
@@ -197,6 +198,11 @@ li a:hover {
     & nav {
       & .produtos {
         margin-top: -9px;
+      }
+      & .menu {
+        & .menuHamburguer {
+          top: 5px;
+        }
       }
     }
   }
