@@ -95,6 +95,33 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .banner {
+    & .text-banner {
+      font-size: 30px;
+      padding: 60px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+    .banner {
+      & .text-banner {
+        font-size: 20px;
+        padding: 50px;
+      }
+    }
+}
+
+@media (max-width: 450px) {
+  .banner {
+    & .text-banner {
+      font-size: 20px;  
+      padding: 20px;
+    }
+  }
+}
+
 /* -------------------------------------- */
 
 .mais{
